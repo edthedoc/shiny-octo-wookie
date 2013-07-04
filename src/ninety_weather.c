@@ -65,7 +65,7 @@ const int WEATHER_IMAGE_RESOURCE_IDS[] = {
 	RESOURCE_ID_IMAGE_NO_WEATHER
 };
 
-//pasted code
+//pasted code vibe pattern for hourly and part hourly alerts
 const unsigned int VIBE_INTERVAL_IN_MINUTES = 30;
 
 const VibePattern HOUR_VIBE_PATTERN = {
@@ -152,6 +152,9 @@ void updateSunsetSunrise()
 	text_layer_set_text(&text_sunset_layer, sunset_text);
 }
 
+
+
+
 unsigned short the_last_hour = 25;
 
 void display_counters(TextLayer *dataLayer, struct Data d, int infoType) {
@@ -183,6 +186,8 @@ void display_counters(TextLayer *dataLayer, struct Data d, int infoType) {
 	text_layer_set_text(dataLayer, temp_text);
 }
 
+
+
 //Weather				 
 void request_weather();
 void failed(int32_t cookie, int http_status, void* context) {	
@@ -192,7 +197,7 @@ void failed(int32_t cookie, int http_status, void* context) {
 	}
 	
 	// link_monitor_handle_failure(http_status);
-	
+
 	//Re-request the location and subsequently weather on next minute tick
 	// located = false;
 }
@@ -285,15 +290,10 @@ void update_display(PblTm *current_time) {
 		  layer_remove_from_parent(&time_format_image.layer.layer);
 		  bmp_deinit_container(&time_format_image);
 		}
-
-/* removing leading zero? duplicate
-		if (display_hour/10 == 0) {
-		  layer_remove_from_parent(&time_digits_images[0].layer.layer);
-		  bmp_deinit_container(&time_digits_images[0]);
-		}
-*/
 	  }
-	  
+
+
+
 	  // -------------------- Calendar week  
 	  static char cw_text[] = "XXXXX00";
 	  string_format_time(cw_text, sizeof(cw_text), TRANSLATION_CW , current_time);
@@ -307,12 +307,12 @@ void update_display(PblTm *current_time) {
 
 
 void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t) {
-  (void)t;  //pasted code line
+  (void)t;  //pasted code line erh
   (void)ctx;	
 	
 	
 	
-	//from roboto weather erh
+//from roboto weather erh
     static char hour_text[] = "00";
     static char minute_text[] = " 00";
     if (clock_is_24h_style())
@@ -332,7 +332,7 @@ void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t) {
     string_format_time(minute_text, sizeof(minute_text), " %M", t->tick_time);
     time_layer_set_text(&time_layer, hour_text, minute_text);
 		
-// date and year from robot weather erh	
+// date and year from roboto weather erh	
 	static char date_text[] = "00"; //erh
 //    if (t->units_changed & DAY_UNIT)
 	    {
@@ -343,7 +343,7 @@ void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t) {
 	static char year_text[] = "0000"; //erh
 //    if (t->units_changed & DAY_UNIT)
 	    {
-        string_format_time(year_text, sizeof(year_text), "20" "%y", t->tick_time);
+        string_format_time(year_text, sizeof(year_text), "20%y", t->tick_time);
         text_layer_set_text(&YearLayer, year_text);
     }
 
@@ -475,7 +475,7 @@ if (clock_is_24h_style()) {
 	text_layer_set_background_color(&YearLayer, GColorClear);
 	text_layer_set_font(&YearLayer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
 
- //added by erh for time display	from roboto weather
+ //added by erh for time display from roboto weather
     time_layer_init(&time_layer, window.layer.frame);
     time_layer_set_text_color(&time_layer, GColorWhite);
     time_layer_set_background_color(&time_layer, GColorClear);
@@ -514,6 +514,7 @@ void handle_deinit(AppContextRef ctx) {
 
 }
 
+// main code
 void pbl_main(void *params)
 {
   PebbleAppHandlers handlers =
