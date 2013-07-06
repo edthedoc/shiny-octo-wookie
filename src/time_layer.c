@@ -13,7 +13,14 @@ void time_layer_update_proc(TimeLayer *tl, GContext* ctx)
 
     if (tl->hour_text && tl->minute_text)
     {
-        GSize hour_sz =
+#ifdef 0
+// This all seems muddled - comment out the weird stuff.
+// I think this is needed to allow the font to be made smaller.
+        /*
+         * Calculate how much space is needed, and available, for the hour
+         * and minute, in the chosen font and size.
+         */
+         GSize hour_sz =
             graphics_text_layout_get_max_used_size(ctx,
                                                    tl->hour_text,
                                                    tl->hour_font,
@@ -31,24 +38,29 @@ void time_layer_update_proc(TimeLayer *tl, GContext* ctx)
                                                    tl->layout_cache);
         int width = minute_sz.w + hour_sz.w;
         int half = tl->layer.bounds.size.w / 2;
+#endif
+
+        /*
+         * Start with the full layer's bounds, and give the left
+         * half to the hours, and the right half to the minutes.
+         */
         GRect hour_bounds = tl->layer.bounds;
         GRect minute_bounds = tl->layer.bounds;
+        hour_bounds.size.w = hour_bounds.size.w / 2;
+        minute.size.w = minute.size.w / 2;
+        minute_bounds.origin.x = minute_bounds.origin.x + hour_bounds.size.w;
 
-        hour_bounds.size.w = half - (width / 2) + hour_sz.w;
-        minute_bounds.origin.x = hour_bounds.size.w - 1;
-        minute_bounds.size.w = minute_sz.w;
-		
         graphics_text_draw(ctx,
                            tl->hour_text,
                            tl->hour_font,
-						   hour_bounds,
+                           hour_bounds,
                            tl->overflow_mode,
                            GTextAlignmentRight,
                            tl->layout_cache);
         graphics_text_draw(ctx,
                            tl->minute_text,
                            tl->minute_font,
-						   minute_bounds,
+                           minute_bounds,
                            tl->overflow_mode,
                            GTextAlignmentLeft,
                            tl->layout_cache);
