@@ -13,7 +13,7 @@ void time_layer_update_proc(TimeLayer *tl, GContext* ctx)
 
     if (tl->hour_text && tl->minute_text)
     {
-#ifdef 0
+#if 0
 // This all seems muddled - comment out the weird stuff.
 // I think this is needed to allow the font to be made smaller.
         /*
@@ -47,7 +47,7 @@ void time_layer_update_proc(TimeLayer *tl, GContext* ctx)
         GRect hour_bounds = tl->layer.bounds;
         GRect minute_bounds = tl->layer.bounds;
         hour_bounds.size.w = hour_bounds.size.w / 2;
-        minute.size.w = minute.size.w / 2;
+        minute_bounds.size.w = minute_bounds.size.w / 2;
         minute_bounds.origin.x = minute_bounds.origin.x + hour_bounds.size.w;
 
         graphics_text_draw(ctx,
