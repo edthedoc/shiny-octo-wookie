@@ -1,34 +1,79 @@
 {
     "media": [
         {
-            "trackingAdjust": -2,
-            "characterRegex": "[0-9: ]",
-            "defName": "FONT_HELVETICA_NEUE_LIGHT_SUBSET_60",
-            "type": "font",
-            "file": "fonts/HelveticaNeueLight.ttf"
+            "defName": "IMAGE_24_HOUR_MODE",
+            "type": "png",
+            "file": "images/time_format_24H.png"
         },
         {
-            "characterRegex": "[0-9: ]",
-            "defName": "FONT_HELVETICA_NEUE_BOLD_SUBSET_60",
-            "type": "font",
-            "file": "fonts/HelveticaNeueBold.ttf"
+            "defName": "IMAGE_PM_MODE",
+            "type": "png",
+            "file": "images/time_format_PM.png"
         },
         {
-            "defName": "FONT_ROBOTO_CONDENSED_21",
-            "type": "font",
-            "file": "fonts/Roboto-Condensed.ttf"
+            "defName": "IMAGE_NO_WEATHER",
+            "type": "png",
+            "file": "images/error.png"
         },
         {
-            "characterRegex": "[0-9:\u00b0-]",
-            "defName": "FONT_ROBOTO_BOLD_SUBSET_49",
-            "type": "font",
-            "file": "fonts/Roboto-Bold.ttf"
+            "defName": "IMAGE_WIND",
+            "type": "png",
+            "file": "images/wind.png"
         },
         {
-            "characterRegex": "[0-9:\u00b0-]",
-            "defName": "FONT_ROBOTO_THIN_SUBSET_49",
-            "type": "font",
-            "file": "fonts/Roboto-Thin.ttf"
+            "defName": "IMAGE_SNOW",
+            "type": "png",
+            "file": "images/snow.png"
+        },
+        {
+            "defName": "IMAGE_SLEET",
+            "type": "png",
+            "file": "images/sleet.png"
+        },
+        {
+            "defName": "IMAGE_RAIN",
+            "type": "png",
+            "file": "images/rain.png"
+        },
+        {
+            "defName": "IMAGE_PARTLY_CLOUDY_NIGHT",
+            "type": "png",
+            "file": "images/partly-cloudy-night.png"
+        },
+        {
+            "defName": "IMAGE_PARTLY_CLOUDY_DAY",
+            "type": "png",
+            "file": "images/partly-cloudy-day.png"
+        },
+        {
+            "defName": "IMAGE_FOG",
+            "type": "png",
+            "file": "images/fog.png"
+        },
+        {
+            "defName": "IMAGE_CLOUDY",
+            "type": "png",
+            "file": "images/cloudy.png"
+        },
+        {
+            "defName": "IMAGE_CLEAR_NIGHT",
+            "type": "png",
+            "file": "images/clear-night.png"
+        },
+        {
+            "defName": "IMAGE_CLEAR_DAY",
+            "type": "png",
+            "file": "images/clear-day.png"
+        },
+        {
+            "defName": "IMAGE_BACKGROUND",
+            "type": "png",
+            "file": "images/background.png"
+        },
+        {
+            "defName": "IMAGE_MENU_ICON",
+            "type": "png",
+            "file": "images/menu_icon_91w.png"
         },
         {
             "trackingAdjust": -3,
@@ -38,79 +83,35 @@
             "file": "fonts/Roboto-Light.ttf"
         },
         {
-            "defName": "IMAGE_MENU_ICON",
-            "type": "png",
-            "file": "images/menu_icon_91w.png"
+            "characterRegex": "[0-9:\u00b0-]",
+            "defName": "FONT_ROBOTO_THIN_SUBSET_49",
+            "type": "font",
+            "file": "fonts/Roboto-Thin.ttf"
         },
         {
-            "defName": "IMAGE_BACKGROUND",
-            "type": "png",
-            "file": "images/background.png"
+            "characterRegex": "[0-9:\u00b0-]",
+            "defName": "FONT_ROBOTO_BOLD_SUBSET_49",
+            "type": "font",
+            "file": "fonts/Roboto-Bold.ttf"
         },
         {
-            "defName": "IMAGE_CLEAR_DAY",
-            "type": "png",
-            "file": "images/clear-day.png"
+            "defName": "FONT_ROBOTO_CONDENSED_21",
+            "type": "font",
+            "file": "fonts/Roboto-Condensed.ttf"
         },
         {
-            "defName": "IMAGE_CLEAR_NIGHT",
-            "type": "png",
-            "file": "images/clear-night.png"
+            "trackingAdjust": -2,
+            "characterRegex": "[0-9: ]",
+            "defName": "FONT_HELVETICA_NEUE_BOLD_SUBSET_60",
+            "type": "font",
+            "file": "fonts/HelveticaNeueBold.ttf"
         },
         {
-            "defName": "IMAGE_CLOUDY",
-            "type": "png",
-            "file": "images/cloudy.png"
-        },
-        {
-            "defName": "IMAGE_FOG",
-            "type": "png",
-            "file": "images/fog.png"
-        },
-        {
-            "defName": "IMAGE_PARTLY_CLOUDY_DAY",
-            "type": "png",
-            "file": "images/partly-cloudy-day.png"
-        },
-        {
-            "defName": "IMAGE_PARTLY_CLOUDY_NIGHT",
-            "type": "png",
-            "file": "images/partly-cloudy-night.png"
-        },
-        {
-            "defName": "IMAGE_RAIN",
-            "type": "png",
-            "file": "images/rain.png"
-        },
-        {
-            "defName": "IMAGE_SLEET",
-            "type": "png",
-            "file": "images/sleet.png"
-        },
-        {
-            "defName": "IMAGE_SNOW",
-            "type": "png",
-            "file": "images/snow.png"
-        },
-        {
-            "defName": "IMAGE_WIND",
-            "type": "png",
-            "file": "images/wind.png"
-        },
-        {
-            "defName": "IMAGE_NO_WEATHER",
-            "type": "png",
-            "file": "images/error.png"
-        },
-        {
-            "defName": "IMAGE_PM_MODE",
-            "type": "png",
-            "file": "images/time_format_PM.png"
-        },
-        {
-            "defName": "IMAGE_24_HOUR_MODE",
-            "type": "png",
-            "file": "images/time_format_24H.png"
+            "trackingAdjust": -2,
+            "characterRegex": "[0-9: ]",
+            "defName": "FONT_HELVETICA_NEUE_LIGHT_SUBSET_60",
+            "type": "font",
+            "file": "fonts/HelveticaNeueLight.ttf"
         }
     ],
     "friendlyVersion": "VERSION",
