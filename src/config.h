@@ -2,7 +2,7 @@
 #define CONFIG_H
 
 //NOTE: longitude is positive for East and negative for West
-#define LATITUDE    				39.7
+#define LATITUDE    				39.7 //Sidari, Corfu haha
 #define LONGITUDE 				19.7
 #define TIMEZONE 				0
 #define DAY_NAME_LANGUAGE 			DAY_NAME_ENGLISH 		// Valid values: DAY_NAME_ENGLISH, DAY_NAME_GERMAN, DAY_NAME_FRENCH
