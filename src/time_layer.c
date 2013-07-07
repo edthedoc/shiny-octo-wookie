@@ -14,7 +14,7 @@ void time_layer_update_proc(TimeLayer *tl, GContext* ctx)
     if (tl->hour_text && tl->minute_text)
     {
 #if 0
-// This all seems muddled - comment out the weird stuff.
+// This all seems muddled - comment out the weird stuff. 
 // I think this is needed to allow the font to be made smaller.
         /*
          * Calculate how much space is needed, and available, for the hour
